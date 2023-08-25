@@ -31,3 +31,21 @@ class Match:
                     if match.timing == timing:
                         matches.append(match)
                 return matches
+def main():
+    flight_table = FlightTable()
+
+    flight_table.add_match(Match("Mumbai", "India", "Sri Lanka", "DAY"))
+    flight_table.add_match(Match("Delhi", "England", "Australia", "DAY-NIGHT"))
+    flight_table.add_match(Match("Chennai", "India", "South Africa", "DAY"))
+    flight_table.add_match(Match("Indore", "England", "Sri Lanka", "DAY-NIGHT"))
+    flight_table.add_match(Match("Mohali", "Australia", "South Africa", "DAY-NIGHT"))
+    flight_table.add_match(Match("Delhi", "India", "Australia", "DAY"))
+
+    while True:
+        print("\nSearch Options:")
+        print("1. List of all matches of a Team")
+        print("2. List of Matches on a Location")
+        print("3. List of Matches based on timing")
+        print("4. Exit")
+
+        choice = input("Enter your choice: ")
