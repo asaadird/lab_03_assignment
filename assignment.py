@@ -69,3 +69,12 @@ def main():
             print("Matches with timing", timing)
             for match in matches:
                 print(match.location, match.team1, "vs", match.team2)
+        elif choice == "4":
+            print("Exiting the program.")
+            break
+
+        else:
+            print("Invalid choice. Please select a valid option.")
+
+if __name__ == "__main__":
+    main()
