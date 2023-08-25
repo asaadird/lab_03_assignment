@@ -3,4 +3,20 @@ class Match:
         self.location = location
         self.team1 = team1
         self.team2 = team2
-        self.timing = timing
+        self.timing = timing 
+        class FlightTable:
+            
+            def init(self):
+                self.matches = []
+
+            def add_match(self, match):
+                self.matches.append(match)
+
+            def list_matches_by_team(self, team_name):
+                matches = []
+                for match in self.matches:
+                    if team_name in [match.team1, match.team2]:
+                        matches.append(match)
+                return matches
+
+            
