@@ -18,5 +18,16 @@ class Match:
                     if team_name in [match.team1, match.team2]:
                         matches.append(match)
                 return matches
+            def list_matches_by_location(self, location):
+                matches = []
+                for match in self.matches:
+                    if match.location == location:
+                        matches.append(match)
+                return matches
 
-            
+            def list_matches_by_timing(self, timing):
+                matches = []
+                for match in self.matches:
+                    if match.timing == timing:
+                        matches.append(match)
+                return matches
