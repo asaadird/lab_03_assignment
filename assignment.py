@@ -48,3 +48,24 @@ def main():
         print("4. Exit")
 
         choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            team_name = input("Enter the team name: ")
+            matches = flight_table.list_matches_by_team(team_name)
+            print("Matches involving", team_name)
+            for match in matches:
+                print(match.location, match.team1, "vs", match.team2, match.timing)
+
+        elif choice == "2":
+            location = input("Enter the location: ")
+            matches = flight_table.list_matches_by_location(location)
+            print("Matches in", location)
+            for match in matches:
+                print(match.team1, "vs", match.team2, match.timing)
+
+        elif choice == "3":
+            timing = input("Enter the timing: ")
+            matches = flight_table.list_matches_by_timing(timing)
+            print("Matches with timing", timing)
+            for match in matches:
+                print(match.location, match.team1, "vs", match.team2)
